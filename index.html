@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Rock Paper Scissors</title>
+    <!--Bootstrap 4.1.3--> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!--Fontawesome-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--main css-->
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <!-- Boostrap fluid container-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <h2>Rock Paper Scisssors</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+            <h3>&nbsp;</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h3>Computer</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <i id="computer" class="fa fa-question-circle-o fa-2x" aria-hidden="true"><br/>?</i>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+            <h3>&nbsp;</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+            <h3 id="output">&nbsp;<br/>&nbsp;</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+            <h3>&nbsp;</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <i id='rock'  class="fa fa-hand-rock-o fa-2x" aria-hidden="true" onclick="playerClick('rock')"><br/>rock</i>
+            </div>
+            <div class="col">
+                <i  id='paper' class="fa fa-hand-paper-o fa-2x" aria-hidden="true" onclick="playerClick('paper')"><br />paper</i> 
+            </div>
+            <div  class="col">
+                <i id='scissors' class="fa fa-hand-scissors-o fa-2x" aria-hidden="true" onclick="playerClick('scissors')"><br/>scissors</i>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+            <h3>&nbsp;</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <b>Computer<br/>Wins</b><br/><span id='computerWins'>0</span>
+            </div>
+            <div class="col">
+                <b>Ties<br/>&nbsp;</b><br/><span id='ties'>0</span>
+             </div>
+            <div  class="col">
+                <b>Human<br/>Wins</b><br/><span id='humanWins'>0</span>
+             </div>
+        </div>
+ 
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>    
+    <!--Required JavaScript-->
+    <script src="js/main.js"></script>
+</body>
+</html>
