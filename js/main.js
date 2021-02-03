@@ -13,7 +13,7 @@ function getRndInteger(min, max) {
 
 // 
 function computerMove(){
-    return getRndInteger(0,2); 
+    return getRndInteger(0,4);      // increased number from 2 for additional options
 }
 
 //
@@ -22,11 +22,11 @@ function playerClick(move){
     var computer = computerMove();
     var elComputer = document.getElementById('computer');
     // clear all background colors, and set select one
-    for(var i = 0; i < 3; i++){
+    for(var i = 0; i < 5; i++){     // changed i < 3 to 5 to reflect lizard and spock
         var el = document.getElementById(moves[i]);
         if(move === moves[i])
         {
-            el.style.backgroundColor = 'lightblue';
+            el.style.backgroundColor = 'lightgreen';
         }
         else{
             el.style.backgroundColor = 'white';
@@ -38,7 +38,7 @@ function playerClick(move){
     console.log(moves[computer]);
     console.log(move);
     switch(moves[computer]){
-        case 'rock':
+        case 'rock':            // outcomes if the computer chooses rock
             switch(move){
                 case 'rock':
                     message = "Rock vs Rock<br/>Tie";
@@ -63,7 +63,7 @@ function playerClick(move){
 
             }
             break;
-        case 'paper':
+        case 'paper':           // outcomes if the computer chooses paper
             switch(move){
                 case 'rock':
                     message = "Paper covers Rock<br/>Computer Wins";
@@ -87,7 +87,7 @@ function playerClick(move){
                     break;
             }
             break;
-        case 'scissors':
+        case 'scissors':        // outcomes if the computer chooses scissors
             switch(move){
                 case 'rock':
                     message = "Rock smashes Scissors<br/>Human Wins";
@@ -101,6 +101,62 @@ function playerClick(move){
                     message = 'Scissors vs Scissors<br/>Tie';
                     ties++;
                     break;
+                case 'lizard':
+                    message = 'Scissors decapitates Lizard<br/>Computer Wins';
+                    computerWins++;
+                    break;
+                case 'spock':
+                    message = "Smock smashes Scissors <br/>Human Wins";
+                    humanWins++;
+                    break;    
+            }
+            break;
+        case 'lizard':        // outcomes if the computer chooses lizard
+            switch(move){
+                case 'rock':
+                    message = "Rock crushes Lizard<br/>Human Wins";
+                    humanWins++;
+                    break;
+                case 'paper':
+                    message = 'Lizard eats Paper<br/>Computer Wins';
+                    computerWins++;
+                    break;
+                case 'scissors':
+                    message = 'Scissors decapitates Lizard<br/>Human Wins';
+                    humanWins++;
+                    break;
+                case 'lizard':
+                    message = 'Lizard vs Lizard<br/>Tie';
+                    ties++;
+                    break;
+                case 'spock':
+                    message = "Lizard poisons Spock <br/>Computer Wins";
+                    computerWins++;
+                    break;    
+            }
+            break;
+        case 'spock':        // outcomes if the computer chooses spock
+            switch(move){
+                case 'rock':
+                    message = "Spock vaporizes rock<br/>Computer Wins";
+                    computerWins++;
+                    break;
+                case 'paper':
+                    message = 'Paper disproves Spock<br/>Human Wins';
+                    humanWins++;
+                    break;
+                case 'scissors':
+                    message = 'Spock smashes Scissors<br/>Computer Wins';
+                    computerWins++;
+                    break;
+                case 'lizard':
+                    message = 'Lizard poisons Spock<br/>Human Wins';
+                    humanWins++;
+                    break;
+                case 'spock':
+                    message = "Spock vs Spock <br/>Tie";
+                    ties++;
+                    break;    
             }
             break;
     }
