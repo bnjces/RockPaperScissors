@@ -1,5 +1,5 @@
 //
-var moves = ['rock', 'paper', 'scissors'];
+var moves = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 
 //
 var humanWins = 0;
@@ -52,6 +52,15 @@ function playerClick(move){
                     message = 'Rock smashes Scissors<br/>Computer Wins';
                     computerWins++;
                     break;
+                case 'lizard':
+                    message = 'Rock crushes lizard <br/>Computer Wins';
+                    computerWins++;
+                    break;
+                case 'spock':
+                    message = "Spock vaporizes rock <br/>Human Wins";
+                    humanWins++;
+                    break;
+
             }
             break;
         case 'paper':
@@ -67,6 +76,14 @@ function playerClick(move){
                 case 'scissors':
                     message = 'Scissors cut Paper<br/>Human Wins';
                     humanWins++;
+                    break;
+                case 'lizard':
+                    message = 'Lizard eats paper<br/>Human Wins';
+                    humanWins++;
+                    break;
+                case 'spock':
+                    message = "Paper disproves Spock <br/>Computer Wins";
+                    computerWins++;
                     break;
             }
             break;
