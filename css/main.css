@@ -1,9 +1,22 @@
 /* main css */
 
+
 div,i {
     text-align: center;
 }
 
 i {
     cursor: pointer;
+}
+
+header {
+    text-align: center;
+}
+
+video {
+    text-align: center;
+}
+
+.center {
+    margin: 0 auto;
 }

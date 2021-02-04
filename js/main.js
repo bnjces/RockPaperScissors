@@ -168,4 +168,4 @@ function playerClick(move){
     elHumanWins.textContent = humanWins;
     var elOutput = document.getElementById('output');
     elOutput.innerHTML = message;
-}
+} 
