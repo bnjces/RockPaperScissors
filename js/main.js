@@ -26,10 +26,10 @@ function playerClick(move){
         var el = document.getElementById(moves[i]);
         if(move === moves[i])
         {
-            el.style.backgroundColor = 'lightgreen';
+            el.style.backgroundColor = '#674D94';
         }
         else{
-            el.style.backgroundColor = 'white';
+            el.style.backgroundColor = '#D4DAF7';
         }
     }
     elComputer.className = 'fa fa-hand-' + moves[computer] + '-o fa-2x';
